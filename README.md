@@ -26,7 +26,9 @@ The dataset contains 60,000 images across 10 classes, with 50,000 official train
 
 To install the dataset open the terminal and do:
 
-python 3 -c "from torchvision.datasets import CIFAR10; CIFAR10(root='./data', train=True, download=True); CIFAR10(root='./data',train=False, download=True)"
+python3 -c "from torchvision.datasets import CIFAR10; CIFAR10(root='./data', train=True, download=True); CIFAR10(root='./data',train=False, download=True)"
+
+change python3 to .venv/bin/python if using the virtual environment.
 
 
 
