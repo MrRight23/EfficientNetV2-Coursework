@@ -17,7 +17,7 @@ scikit-learn -> 1.9.1
 NumPy -> 2.5.4
 
 
-DATASET
+---DATASET---
 
 The project uses the CIFAR-10 dataset. use this link:
 https://cave.cs.toronto.edu/kriz/cifar.html
@@ -46,7 +46,7 @@ The experiments directory is what contains the training scripts. Baseline and mo
 Saved model checkpoints can be found inside of the results directory. 
 
 
-The project includes six EfficientNetV2-S experiments
+---The project includes six EfficientNetV2-S experiments---
 
 
 -Experiment A - One epoch with a fixed 160x160 training resolution. - my_training.py
@@ -64,7 +64,7 @@ The project includes six EfficientNetV2-S experiments
 For all the experiments, validaton images remain the same - 224x224 resolution.
 
 
-BASELINE EVALUATION
+---BASELINE EVALUATION---
 
 Two classification baselines are included. 
 
@@ -77,7 +77,7 @@ To run the 3 nearest neighbours baseline run the knn_baseline.py file that is in
 implementation/evaluation/knn_baseline.py
 
 
-MODEL EVALUATION
+---MODEL EVALUATION---
 
 Experiment D uses the saved checkpoint - progressive_training.pth
 
@@ -110,13 +110,25 @@ Experiment D, the progressive resizing model managed to achieve:
 
 90.90% validation accuracy and a macro F1-score of 0.9087 on the same 1000 validation images.
 
-Final Test Results
+---Final Test Results---
 
 Experiment D managed to achieve:
 
 91.60% test accuracy with test images of 10,000 and a Macro F1-score of 0.9162. 
  
  Experiment B was not evaluated on the official test set. its reported results are from the validation set. 
+
+
+---Saved Model Checkpoints---
+
+The six trained model checkpoints are available in the GitHub Release section under the v1.0.
+
+Download the result zip and extract into the main project directory. 
+
+The evaluation scripts load these saved checkpoints in order to calculate validation accuracy, macro F1-score and confusion matrices without having to retrain the mdoels.
+
+
+ 
 
 
 
